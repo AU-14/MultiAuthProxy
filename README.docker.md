@@ -8,4 +8,4 @@
 ## For production
  * Copy `authServers.json` 
  * Replicate relevant parts of `docker-compose.yml` into your own setup
- * Refer to this directory with `build:` instruction
+ * Refer to this directory/repository with `build:` instruction
