@@ -1,0 +1,14 @@
+services:
+  cm14-multiauthproxy:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9119:9119" # For testing only - to run alongside a dockerized game, use networks instead
+    volumes:
+      - ./authServers.docker.json:/opt/proxy/authServers.json:ro
+      - store-volume:/opt/proxy/store
+
+volumes:
+  store-volume: 
+    # Non persistent. Again, for testing only
+
